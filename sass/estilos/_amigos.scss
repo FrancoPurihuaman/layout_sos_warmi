@@ -1,0 +1,187 @@
+.cabezera-amigos__menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+        background-color: $color1;
+    li{
+        display: block;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        line-height: 2em;
+        margin: 0 1em;
+        border-radius: 50%;
+        cursor: pointer;
+        color: darken(#fff,5%);
+        @include from(m){
+            margin: 0 2em;
+        }
+        &:before{
+            line-height: 2em;
+        }
+        &.active:before{
+            color: darken($color1,20);
+        }
+    }
+}
+
+.mis-amigos, .amigos-encontrados, .amigos-invitaciones{
+    > div{
+        display: flex;
+        padding-bottom: .3em;
+        border-bottom: 1px solid darken($color2,10%);
+        margin-bottom: 1em;
+        position: relative;
+        background: content-box;
+    }
+    &__foto{
+        width: 3em;
+        height: 3em;
+    }
+    &__nombre{
+        width: calc(100% - 3em);
+        span{
+            padding-left: .5em;
+        }
+    }
+}
+
+
+.mis-amigos{
+    padding-top: 2em;
+    > div{
+        padding-right: 2em;
+        >span{
+            width: 1.5em;
+            height: 1.5em;
+            text-align: center;
+            line-height: 1.5em;
+            border-radius: 50%;
+            color: darken($color2,50%);
+            cursor: pointer;
+            position: absolute;
+            right: .5em;
+            &:before{
+                line-height: 1.5em;
+            }
+            &:active{
+                background-color: lighten($color1,25);
+            }
+        }
+    }
+    &__foto{
+        border-radius: 50%;
+    }
+    &__nombre{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.invitaciones{
+    min-height: calc(100vh - 6em);
+    >div{
+        p{
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+    .amigos-invitaciones{
+         &__opciones{
+            padding-top: .5em;
+            padding-left: .5em;
+            input{
+                @include button(rgba($color1,.8), #fff);
+                padding: 0 1.1em;
+                line-height: 2em;
+                margin-bottom: 0;
+                outline: none;
+                &:last-child{
+                    color: $color1;
+                    box-shadow: 0 0 0 1px $color1 inset;
+                    background-color: transparent;
+                }
+            }
+        }   
+    }
+}
+
+.mas-amigos{
+    padding-top: 2em;
+    .container-busqueda{
+        border-radius: 8px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+        span{
+            display: block;
+            width: 4em;
+            height: 2.5em;
+            text-align: center;
+            line-height: 2.5em;
+            font-size: .9em;
+            color: $color1;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            &:before{
+                line-height: 2.5em;
+            }
+        }
+        @include from(m){
+            padding-right: 4em;
+            span{
+                display: block;
+            }
+        } 
+    }
+    .busqueda-amigos{
+        width: 100%;
+        height: 2.5em;
+        font-size: .9em;
+        padding-left: 1em;
+        padding-right: 1em;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+    }
+    .amigos-encontrados{
+        padding-top: 1.5em;
+        &__foto{
+            border-radius: 50%; 
+        }
+        &__nombre{
+            display: flex;
+            align-items: center;
+            div:nth-child(2){
+                text-align: center;
+                span{
+                    padding: 0;
+                    color: #ccc;
+                    font-size: 1.2em;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.mis-amigos, .invitaciones, .mas-amigos{
+    display: none;
+}
+.mis-amigos.active{
+    display: block;
+}
+.mis-amigos.active{
+    display: block;
+}
+.mis-amigos.active{
+    display: block;
+}
+
+.tab4.active{
+    display: block;
+}

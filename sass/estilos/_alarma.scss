@@ -1,0 +1,69 @@
+.tab3{
+    flex-direction: column;
+    min-height: calc(100vh - 3em);
+    background-color: $color7;
+    position: relative;
+    &__subtitulo{
+        text-align: center;
+        padding-top: 3em;
+        span{
+            display: block;
+            font-size: 2em;
+        }
+    }
+    .cont-btn-em{
+        padding-top: 3em;
+        padding-bottom: 2em;
+        text-align: center;
+        .btn-emergency{
+            width: 8em;
+            height: 8em;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: darken($color7,15);
+            color: #fff;
+            box-shadow: 0 10px darken($color7,25);
+        }
+    
+    }
+    .msg-alertando{
+        display: none;
+    }
+}
+.tab3.alertar{
+    .btn-emergency{
+            transform: scale(.95,.95);
+        }
+    .msg-alertando{
+        display: block;
+        position: absolute;
+        bottom: 3em;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        span{
+            position: relative;
+            padding-left: 1.7em;
+            color: darken(#fff,7);
+            &:before{
+                position: absolute;
+                left: 0;
+                animation: campana .5s infinite;
+            }
+        }
+    }
+}
+.tab3.active{
+    display: block;
+}
+
+@keyframes campana{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

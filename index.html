@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>SOS WARMI</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stylesFont.css">
+</head>
+<body>
+  <main>
+    <nav class="ed-container main-nav" id="main-nav">
+        <ul class="main-menu">
+            <li id="mi-perfil"><a href="#" class="icon-perfil">Mi perfil</a></li>
+            <li id="mi-estado"><a href="#" class="icon-editar">Estado</a></li>
+            <li><a href="#" class="icon-alarma">Mensaje ayuda</a></li>
+            <li><a href="#" class="icon-mas-amigos">Invitar amigos</a></li>
+            <li><a href="#" class="icon-config">Configuraciones</a></li>
+            <li><a href="#" class="icon-salir">Salir</a></li>
+        </ul>
+    </nav>
+    <div class="ed-container main">
+        <div class="ed-container main-page" id="main-page">
+            <div class="ed-container top" id="top">
+                <div class="ed-item icon-menu s-15" id="icon_menu"></div>
+                <h1 class="ed-item top__titulo s-70">SOS WARMI</h1>
+                <div class="ed-item s-15"></div>
+            </div>
+            <header class="ed-container main-header">
+                <div class="ed-item perfil" id="perfil">
+                    <div class="perfil__cpf"><img src="img/perfil.jpg" class="perfil__fondo" alt=""></div>
+                    <img src="img/perfil.jpg" alt="" class="perfil__foto" id="perfil__foto">
+                    <p class="perfil__nombre" id="perfil__nombre">Angie clariza</p>
+                    <span class="icon-test most-test" id="most-test"></span>
+                </div>
+                <div class="ed-item cont-test" id="cont-test">
+                    <div class="test" id="test" data-porcentaje="15">
+                        <span class="test__titulo">SOS WARMI</span>
+                        <span class="test__porcentaje"></span>
+                    </div>
+                    <div class="cont-test__msm">
+                        <p id="testSms"></p>
+                    </div>
+                    <span class="icon-retroceder ir-perfil" id="ir-perfil"></span>
+                </div>
+            </header>
+            <div class="ed-item subMenu-container">
+                <ul class="subMenu" id="subMenu">
+                    <li><a href="#" class="icon-editar" id="subMenu__estado"></a><span>Estado</span></li>
+                    <li><a href="#" class="icon-notificaciones" id="subMenu__notificaciones"></a><span>Notificaciones</span></li>
+                    <li><a href="#" class="icon-alarma" id="subMenu__alarma"></a><span>Alama</span></li>
+                    <li><a href="#" class="icon-amigos" id="subMenu__amigos"></a><span>Amigos</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ed-container tabs_content" id="tabs_content">
+            <div class="ed-item tabs_content__top no-pading">
+                <span class="icon-retroceder" id="icon-retroceder"></span>
+                <h3 class="tabs_content__titulo" id="tc-titulo"></h3>
+            </div>
+            <div class="ed-item no-pading">
+                <div class="ed-item tab1 sm-tabs" id="tab1">
+                    <h2 class="tab1__titulo">¿Cómo te sientes hoy?</h2>
+                    <div class="grids">
+                        <div class="tab1__content-caras">
+                            <img src="img/caras/alegre.png" alt="" class="tab1__caras">
+                            <div class="tab1__descripcion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae id velit incidunt, cum, expedita.</p>
+                                <input type="button" value="Publicar"/>
+                            </div>
+                        </div>
+                        <div class="tab1__content-caras">
+                            <img src="img/caras/sorprendido.png" alt="" class="tab1__caras">
+                            <div class="tab1__descripcion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptatum, hic?</p>
+                                <input type="button" value="Publicar"/>
+                            </div>
+                        </div>
+
+                        <div class="tab1__content-caras">
+                            <img src="img/caras/pena.png" alt="" class="tab1__caras">
+                            <div class="tab1__descripcion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat excepturi, itaque, id </p>
+                                <input type="button" value="Publicar"/>
+                            </div>
+                        </div>
+
+                        <div class="tab1__content-caras">
+                            <img src="img/caras/triste.png" alt="" class="tab1__caras">
+                            <div class="tab1__descripcion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officia quam mollitia</p>
+                                <input type="button" value="Publicar"/>
+                            </div>
+                        </div>
+
+                        <div class="tab1__content-caras">
+                            <img src="img/caras/llorando.png" alt="" class="tab1__caras">
+                            <div class="tab1__descripcion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium numquam consequuntur accusamus.</p>
+                                <input type="button" value="Publicar"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ed-item tab2 sm-tabs" id="tab2">
+                   <div class="notificaciones" >
+                       <div class="notificacion">
+                           <div class="notificacion__importancia">
+                               <span id="notificacion__importancia">Todo Bien</span>
+                           </div>
+                           <div class="notificacion__amigo">
+                               <img src="img/angie.jpg" alt="">
+                               <div class="">
+                                   <span>Angie Clariza</span>
+                                   <p>Lorem ipsum dolor sit amet.</p>
+                               </div>
+                           </div>
+                           <div class="ed-container notificacion__descripcion">
+                               <div class="ed-item no-pading">
+                                   <img src="img/caras/alegre.png" alt="">
+                                   <span>hace 2h</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="notificacion alerta">
+                           <div class="notificacion__importancia">
+                               <span id="notificacion__importancia">Todo Bien</span>
+                           </div>
+                           <div class="notificacion__amigo">
+                               <img src="img/angie.jpg" alt="">
+                               <div class="">
+                                   <span>Angie Clariza</span>
+                                   <p>Lorem ipsum dolor sit amet.</p>
+                               </div>
+                           </div>
+                           <div class="ed-container notificacion__descripcion">
+                               <div class="ed-item no-pading">
+                                   <img src="img/caras/triste.png" alt="">
+                                   <span>hace 2h</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="notificacion emergencia">
+                           <div class="notificacion__importancia">
+                               <span id="notificacion__importancia">Todo Bien</span>
+                           </div>
+                           <div class="notificacion__amigo">
+                               <img src="img/angie.jpg" alt="">
+                               <div class="">
+                                   <span>Angie Clariza</span>
+                                   <p>Lorem ipsum dolor sit amet.</p>
+                               </div>
+                           </div>
+                           <div class="ed-container notificacion__descripcion">
+                               <div class="ed-item no-pading s-80">
+                                   <img src="img/caras/llorando.png" alt="">
+                                   <span>hace 2h</span>
+                               </div>
+                               <div class="ed-item no-pading s-20">
+                                   <span class="icon-localizacion"></span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="ed-item tab3 sm-tabs" id="tab3">
+                    <div class="tab3__subtitulo">
+                        <span>Boton de</span><span>Emergencia</span>
+                    </div>
+                    <div class="ed-item cont-btn-em">
+                        <input type="button" class="btn-emergency" id="btn-emergency" value="Ayuda"/>
+                    </div>
+                    <div class="ed-item msg-alertando activo">
+                        <span class="icon-alarma">Alertando amigos</span>
+                    </div>
+                </div>
+                <div class="ed-item tab_content tab4 sm-tabs no-pading" id="tab4">
+                    <div class="ed-container cabezera-amigos">
+                        <ul class="ed-item cabezera-amigos__menu no-pading" id="ca-menu">
+                            <li class="icon-amigos active" data-content="#mis-amigos"></li>
+                            <li class="icon-mas-amigos" data-content="#invitaciones"></li>
+                            <li class="icon-buscar" data-content="#mas-amigos"></li>
+                        </ul>
+                    </div>
+                    <div class="ed-container amigos-content-tabs">
+                        <div class="ed-item mis-amigos cm-amigos active" id="mis-amigos">
+                            <div>
+                                <img src="img/angie.jpg" alt="" class="mis-amigos__foto">
+                                <div class="mis-amigos__nombre">
+                                    <span>Angie Clariza</span>
+                                </div>
+                                <span class="icon-opciones"></span>
+                            </div>
+                            <div>
+                                <img src="img/angie.jpg" alt="" class="mis-amigos__foto">
+                                <div class="mis-amigos__nombre">
+                                    <span>Angie Clariza</span>
+                                </div>
+                                <span class="icon-opciones"></span>
+                            </div>
+                            <div>
+                                <img src="img/angie.jpg" alt="" class="mis-amigos__foto">
+                                <div class="mis-amigos__nombre">
+                                    <span>Angie Clariza</span>
+                                </div>
+                                <span class="icon-opciones"></span>
+                            </div>
+                            <div>
+                                <img src="img/angie.jpg" alt="" class="mis-amigos__foto">
+                                <div class="mis-amigos__nombre">
+                                    <span>Angie Clariza</span>
+                                </div>
+                                <span class="icon-opciones"></span>
+                            </div>
+                            <div>
+                                <img src="img/angie.jpg" alt="" class="mis-amigos__foto">
+                                <div class="mis-amigos__nombre">
+                                    <span>Angie Clariza</span>
+                                </div>
+                                <span class="icon-opciones"></span>
+                            </div>
+                        </div>
+                        <div class="ed-container invitaciones cm-amigos" id="invitaciones">
+                            <div class="ed-item"><p>Solicitudes de amistad</p></div>
+                            <div class="ed-item amigos-invitaciones">
+                                <div class="invitacion-amigo">
+                                    <img src="img/angie.jpg" alt="" class="amigos-invitaciones__foto">
+                                    <div class="amigos-invitaciones__nombre">
+                                        <span class="">Angie Clariza</span>
+                                        <div class="amigos-invitaciones__opciones">
+                                            <input type="button" value="Confirmar" class="activar-sms" data-sms="confirmar">
+                                            <input type="button" value="Eliminar" class="activar-sms" data-sms="eliminar">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="invitacion-amigo">
+                                    <img src="img/angie.jpg" alt="" class="amigos-invitaciones__foto">
+                                    <div class="amigos-invitaciones__nombre">
+                                        <span class="">Angie Clariza</span>
+                                        <div class="amigos-invitaciones__opciones">
+                                            <input type="button" value="Confirmar" class="activar-sms" data-sms="confirmar">
+                                            <input type="button" value="Eliminar" class="activar-sms" data-sms="eliminar">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="invitacion-amigo">
+                                    <img src="img/angie.jpg" alt="" class="amigos-invitaciones__foto">
+                                    <div class="amigos-invitaciones__nombre">
+                                        <span class="">Angie Clariza</span>
+                                        <div class="amigos-invitaciones__opciones">
+                                            <input type="button" value="Confirmar" class="activar-sms" data-sms="confirmar">
+                                            <input type="button" value="Eliminar" class="activar-sms" data-sms="eliminar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ed-container mas-amigos cm-amigos" id="mas-amigos">
+                            <div class="ed-item">
+                                <div class="container-busqueda">
+                                    <input type="search" class="busqueda-amigos" placeholder="Buscar" autofocus>
+                                    <span class="icon-buscar" id="btn-mAmgos"></span>
+                                </div>
+                            </div>
+                            <div class="ed-item amigos-encontrados">
+                                <div class="amigo-encontrado">
+                                    <img src="img/angie.jpg" alt="" class="amigos-encontrados__foto">
+                                    <div class="amigos-encontrados__nombre">
+                                      <div class="s-90">
+                                          <span>Angie Clariza</span>
+                                      </div>
+                                      <div class="s-10">
+                                          <span class="icon-mas activar-sms" data-sms="agregar"></span>
+                                      </div>  
+                                    </div>
+                                </div>
+                                <div class="amigo-encontrado">
+                                    <img src="img/angie.jpg" alt="" class="amigos-encontrados__foto">
+                                    <div class="amigos-encontrados__nombre">
+                                      <div class="s-90">
+                                          <span>Angie Clariza</span>
+                                      </div>
+                                      <div class="s-10">
+                                          <span class="icon-mas activar-sms" data-sms="agregar"></span>
+                                      </div>  
+                                    </div>
+                                </div>
+                                <div class="amigo-encontrado">
+                                    <img src="img/angie.jpg" alt="" class="amigos-encontrados__foto">
+                                    <div class="amigos-encontrados__nombre">
+                                      <div class="s-90">
+                                          <span>Angie Clariza</span>
+                                      </div>
+                                      <div class="s-10">
+                                          <span class="icon-mas activar-sms" data-sms="agregar"></span>
+                                      </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

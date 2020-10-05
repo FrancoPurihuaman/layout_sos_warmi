@@ -1,0 +1,80 @@
+.tabs_content{
+    align-content: flex-start;
+    min-height: calc(100vh);
+    position: relative;
+    background: $color2;
+    overflow: hidden;
+    &__top{
+        height: 3em;
+        text-align: center;
+        line-height: 3em;
+        position: relative;
+        border-bottom: 1px solid darken($color2,10%);
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3em;
+            height: 3em;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            &:before{
+                font-size: 1.2em;
+                border-radius: 50%;
+            }
+            &:active{             
+                &:before{
+                    transform: scale(1.5);
+                    color: #ccc;
+                    background-color: rgba($color1,.5);
+                }
+            }
+        }
+    }
+    &__titulo{
+        margin: 0;
+    }
+    display: none;
+}
+.i-sms{
+    display: flex;
+    width: 15em;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+    border: none;
+    border-radius: .27em;
+    padding: 0;
+    color: $color4;
+    background-color: rgba($color1,.5);
+    position: absolute;
+    bottom: 1.5em;
+    right: -100%;
+    &:before{
+        content: "";
+        border: 9px solid transparent;
+        border-left: 9px solid rgba($color1,.5);
+        position: absolute;
+        top: .4em;
+        left: 100%;
+    }
+    &.active{
+        animation: i-msm 3s ease;
+    }
+}
+
+.tabs_content.active{
+    display: block;
+}
+.sm-tabs{
+    display: none;
+}
+
+
+@keyframes i-msm{
+    10%,60%{
+        right: 2em;
+    }
+}

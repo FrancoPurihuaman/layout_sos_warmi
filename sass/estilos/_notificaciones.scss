@@ -1,0 +1,84 @@
+.notificaciones{
+    padding-top: .5em;
+    @include grid(div, 1,2,3);
+}
+.notificacion{
+    border: 1px solid darken($color2,10%);
+    &__importancia{
+        height: 2em;
+        line-height: 2em;
+        padding-left: .4em;
+        background-color: lighten($color1,10%);
+    }
+    &__amigo{
+        display: flex;
+        padding-bottom: .3em;
+        border-bottom: 1px solid darken($color2,10%);
+        position: relative;
+        background: content-box;
+        padding-top: .8em;
+        margin-left: .3em;
+        margin-right: .3em;
+        img{
+            width: 3em;
+            height: 3em;
+            border-radius: 4px;
+        }
+        > div{
+            width: calc(100% - 3em);
+            padding-left: .5em;
+            p{
+                font-size: .7em;
+                margin-top: .4em;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__descripcion{
+        padding: .5em .3em .3em;
+        > div{
+            display: flex;
+            align-items: center;
+            span{
+                display: flex;
+                align-items: center;
+            }
+            &:nth-child(1){
+                span{
+                    padding-left: 1em;
+                    font-size: .8em;
+                }
+            }
+            &:nth-child(2){
+                justify-content: flex-end;
+                span{
+                    width: 2em;
+                    height: 1.5em;
+                    justify-content: center;
+                    cursor: pointer;
+                    &:active{
+                        color: $color1;
+                    }
+                }
+            }
+        }
+        img{
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}
+.notificacion.alerta{
+    .notificacion__importancia{
+        background-color: lighten($color6,10%);
+    }
+    
+}
+.notificacion.emergencia{
+    .notificacion__importancia{
+        background-color: $color5;
+    }
+}
+.tab2.active{
+    display: block;
+}

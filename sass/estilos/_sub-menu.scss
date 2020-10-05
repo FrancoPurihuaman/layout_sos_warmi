@@ -1,0 +1,79 @@
+.subMenu-container{
+    padding-top: 1.3em;
+}
+.subMenu{
+    padding: 0;
+    margin: 0;
+    @include grid("li",2,3,3,3);
+    
+    li{
+        text-align: center;
+        font-size: .8em;
+        color: $color9;
+        padding-bottom: 1.2em;
+        position: relative;
+        &:before{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 1.5em);
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+        }
+        &.active:before{
+            border: 1px solid rgba($color1,.2);
+            transform: scale(30);
+            transition: all .5s ease;
+            opacity: 0;
+        }
+        
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.5em;
+            height: 4.5em;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid $color1;
+            margin-bottom: .3em;
+            
+            &:before{
+                font-size: 1.3em;
+            }
+            &:after{
+                width: 1px;
+                height: 1px;
+                background-color: transparent;
+            }
+            &.icon-test{
+               color: darken(green, 10%);
+            }
+            &.icon-editar{
+                color: darken(orange, 10%);
+            }
+            &.icon-notificaciones{
+                color: lighten(#3EB6CF, 10%);
+            }
+            &.icon-alarma{
+                color: rgba(red, .8);
+            }
+            &.icon-localizacion{
+                color: rgba(orange, .8);
+            }
+            &.icon-amigos{
+                color: #3381CC;
+            }
+        }
+    }
+}
+a{
+    &:link, &:hover, &:active, &:visited { 
+        text-decoration : none;
+    }
+}
